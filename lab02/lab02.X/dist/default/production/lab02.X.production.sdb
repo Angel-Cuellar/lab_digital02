@@ -1,0 +1,266 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"16 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\funciones.c
+[v _conf_OSCCON conf_OSCCON `(v  1 e 1 0 ]
+"51
+[v _conf_ADC conf_ADC `(v  1 e 1 0 ]
+"84
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+"106
+[v _comando_LCD comando_LCD `(v  1 e 1 0 ]
+"119
+[v _centrado_LCD centrado_LCD `(v  1 e 1 0 ]
+"129
+[v _sed_LCD sed_LCD `(v  1 e 1 0 ]
+"138
+[v _caracteres_LCD caracteres_LCD `(v  1 e 1 0 ]
+"156
+[v _centenas centenas `(uc  1 e 1 0 ]
+"46 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\lab02_main.c
+[v _isr isr `II(v  1 e 1 0 ]
+"63
+[v _main main `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"290
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"352
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"414
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S122 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"482
+[s S131 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S136 . 1 `S122 1 . 1 0 `S131 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES136  1 e 1 @11 ]
+[s S70 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S78 . 1 `S70 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES78  1 e 1 @12 ]
+"1238
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S23 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1276
+[s S28 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S37 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S40 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S43 . 1 `S23 1 . 1 0 `S28 1 . 1 0 `S37 1 . 1 0 `S40 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES43  1 e 1 @31 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1540
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1664
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S154 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S162 . 1 `S154 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES162  1 e 1 @140 ]
+[s S238 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1882
+[s S244 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S249 . 1 `S238 1 . 1 0 `S244 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES249  1 e 1 @143 ]
+"2970
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+[s S290 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2991
+[u S296 . 1 `S290 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES296  1 e 1 @159 ]
+"3387
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3449
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3587
+[v _ADIF ADIF `VEb  1 e 0 @102 ]
+"4133
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"4136
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"4139
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"38 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\lab02_main.c
+[v _conversion1 conversion1 `uc  1 e 1 0 ]
+"39
+[v _conversion2 conversion2 `uc  1 e 1 0 ]
+"40
+[v _voltaje1 voltaje1 `[4]uc  1 e 4 0 ]
+"63
+[v _main main `(v  1 e 1 0 ]
+{
+"130
+} 0
+"129 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\funciones.c
+[v _sed_LCD sed_LCD `(v  1 e 1 0 ]
+{
+[v sed_LCD@dato dato `*.24uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.24uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.24uc  1 a 1 12 ]
+"136
+} 0
+"138
+[v _caracteres_LCD caracteres_LCD `(v  1 e 1 0 ]
+{
+[v caracteres_LCD@data data `uc  1 a 1 wreg ]
+[v caracteres_LCD@data data `uc  1 a 1 wreg ]
+[v caracteres_LCD@data data `uc  1 a 1 10 ]
+"151
+} 0
+"84
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+{
+"104
+} 0
+"16
+[v _conf_OSCCON conf_OSCCON `(v  1 e 1 0 ]
+{
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 11 ]
+"46
+} 0
+"51
+[v _conf_ADC conf_ADC `(v  1 e 1 0 ]
+{
+[v conf_ADC@canal canal `uc  1 a 1 wreg ]
+[v conf_ADC@canal canal `uc  1 a 1 wreg ]
+[v conf_ADC@frec_reloj frec_reloj `uc  1 p 1 9 ]
+[v conf_ADC@canal canal `uc  1 a 1 12 ]
+"77
+} 0
+"119
+[v _centrado_LCD centrado_LCD `(v  1 e 1 0 ]
+{
+[v centrado_LCD@x x `uc  1 a 1 wreg ]
+[v centrado_LCD@x x `uc  1 a 1 wreg ]
+[v centrado_LCD@y y `uc  1 p 1 11 ]
+[v centrado_LCD@x x `uc  1 a 1 12 ]
+"127
+} 0
+"106
+[v _comando_LCD comando_LCD `(v  1 e 1 0 ]
+{
+[v comando_LCD@dato dato `uc  1 a 1 wreg ]
+[v comando_LCD@dato dato `uc  1 a 1 wreg ]
+[v comando_LCD@dato dato `uc  1 a 1 10 ]
+"117
+} 0
+"156
+[v _centenas centenas `(uc  1 e 1 0 ]
+{
+[v centenas@cantidad cantidad `uc  1 a 1 wreg ]
+"158
+[v centenas@centenas centenas `uc  1 a 1 13 ]
+"159
+[v centenas@cont cont `uc  1 a 1 11 ]
+"156
+[v centenas@cantidad cantidad `uc  1 a 1 wreg ]
+"158
+[v centenas@cantidad cantidad `uc  1 a 1 12 ]
+"189
+} 0
+"46 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\lab02_main.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"61
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
+"41
+} 0
