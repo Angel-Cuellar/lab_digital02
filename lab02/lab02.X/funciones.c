@@ -153,10 +153,10 @@ void caracteres_LCD(char data){
 // funcion encargada de convertir el valor del ADC a decimales que muestren el 
 // valor de la conversion en un voltaje entre 0V-5V, en este caso es para el 
 // numero entero antes del punto decimal. 
-char centenas(uint8_t cantidad) {
+char centenas(uint32_t cantidad) {
     
     char centenas = 0;        // creacion de variables para hacer operaciones 
-    uint8_t cont = 0; 
+    uint32_t cont = 0; 
     
     while (cantidad >= 100) {
         cantidad = cantidad - 100;  // proceso de division para saber cuantas 
@@ -191,10 +191,10 @@ char centenas(uint8_t cantidad) {
 // funcion encargada de convertir el valor del ADC a decimales que muestren el 
 // valor de la conversion en un voltaje entre 0V-5V, en este caso es para el 
 // perimer numero entero despues del punto decimal, osea las unidades de millar.  
-char decenas(uint8_t cantidad) {
+char decenas(uint16_t cantidad) {
     
     char decenas = 0;        // creacion de variables para hacer operaciones  
-    uint8_t cont = 0;
+    uint16_t cont = 0;
     
     while (cantidad >= 100) {
         cantidad = cantidad - 100;  // proceso de division para saber cuantas               
@@ -231,10 +231,10 @@ char decenas(uint8_t cantidad) {
 // funcion encargada de convertir el valor del ADC a decimales que muestren el 
 // valor de la conversion en un voltaje entre 0V-5V, en este caso es para el 
 // segundo numero entero despues del punto decimal, osea las decemas de millar.  
-char unidades(uint8_t cantidad) {
+char unidades(uint16_t cantidad) {
     
     char unidades = 0;       // creacion de variables para hacer operaciones
-    uint8_t cont = 0;
+    uint16_t cont = 0;
     
     while (cantidad >= 100) {
         cantidad = cantidad - 100;  // proceso de division para saber cuantas               

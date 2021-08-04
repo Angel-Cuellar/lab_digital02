@@ -35,8 +35,8 @@
 
 ///////////////// declaración de variables /////////////////////////////////////
 
-uint8_t conversion1 = 0; 
-uint8_t conversion2 = 0;
+uint32_t conversion1 = 0; 
+uint32_t conversion2 = 0;
 char voltaje1[4] ;
 char voltaje2[4] ;
 
@@ -117,12 +117,14 @@ while (1) {
         ADCON0bits.GO = 1;
     }
     
+    voltaje1[1] = centenas(conversion1);
+    
     centrado_LCD(0,0);
     __delay_us(100);
-    sed_LCD("S1:    S2:   S3:");
+    sed_LCD(&voltaje1[1]);
     __delay_us(100);
     
-    voltaje1[1] = centenas(conversion1);
+    
     
 ;
 }

@@ -701,20 +701,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 165 ]
 }
 "156
-[; ;funciones.c: 156: char centenas(uint8_t cantidad) {
-[v _centenas `(uc ~T0 @X0 1 ef1`uc ]
+[; ;funciones.c: 156: char centenas(uint32_t cantidad) {
+[v _centenas `(uc ~T0 @X0 1 ef1`ul ]
 {
 [e :U _centenas ]
-[v _cantidad `uc ~T0 @X0 1 r1 ]
+[v _cantidad `ul ~T0 @X0 1 r1 ]
 [f ]
 "158
 [; ;funciones.c: 158:     char centenas = 0;
 [v _centenas `uc ~T0 @X0 1 a ]
 [e = _centenas -> -> 0 `i `uc ]
 "159
-[; ;funciones.c: 159:     uint8_t cont = 0;
-[v _cont `uc ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `uc ]
+[; ;funciones.c: 159:     uint32_t cont = 0;
+[v _cont `ul ~T0 @X0 1 a ]
+[e = _cont -> -> -> 0 `i `l `ul ]
 "161
 [; ;funciones.c: 161:     while (cantidad >= 100) {
 [e $U 167  ]
@@ -722,17 +722,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "162
 [; ;funciones.c: 162:         cantidad = cantidad - 100;
-[e = _cantidad -> - -> _cantidad `i -> 100 `i `uc ]
+[e = _cantidad - _cantidad -> -> -> 100 `i `l `ul ]
 "163
 [; ;funciones.c: 163:         cont++;
-[e ++ _cont -> -> 1 `i `uc ]
+[e ++ _cont -> -> -> 1 `i `l `ul ]
 "164
 [; ;funciones.c: 164:     }
 }
 [e :U 167 ]
 "161
 [; ;funciones.c: 161:     while (cantidad >= 100) {
-[e $ >= -> _cantidad `i -> 100 `i 168  ]
+[e $ >= _cantidad -> -> -> 100 `i `l `ul 168  ]
 [e :U 169 ]
 "166
 [; ;funciones.c: 166:     switch (cont){
@@ -813,16 +813,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 170  ]
 [e :U 171 ]
-[e [\ -> _cont `i , $ -> 0 `i 172
- , $ -> 1 `i 173
- , $ -> 2 `i 174
- , $ -> 3 `i 175
- , $ -> 4 `i 176
- , $ -> 5 `i 177
- , $ -> 6 `i 178
- , $ -> 7 `i 179
- , $ -> 8 `i 180
- , $ -> 9 `i 181
+[e [\ _cont , $ -> -> -> 0 `i `l `ul 172
+ , $ -> -> -> 1 `i `l `ul 173
+ , $ -> -> -> 2 `i `l `ul 174
+ , $ -> -> -> 3 `i `l `ul 175
+ , $ -> -> -> 4 `i `l `ul 176
+ , $ -> -> -> 5 `i `l `ul 177
+ , $ -> -> -> 6 `i `l `ul 178
+ , $ -> -> -> 7 `i `l `ul 179
+ , $ -> -> -> 8 `i `l `ul 180
+ , $ -> -> -> 9 `i `l `ul 181
  170 ]
 [e :U 170 ]
 "188
@@ -834,20 +834,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 166 ]
 }
 "194
-[; ;funciones.c: 194: char decenas(uint8_t cantidad) {
-[v _decenas `(uc ~T0 @X0 1 ef1`uc ]
+[; ;funciones.c: 194: char decenas(uint16_t cantidad) {
+[v _decenas `(uc ~T0 @X0 1 ef1`ui ]
 {
 [e :U _decenas ]
-[v _cantidad `uc ~T0 @X0 1 r1 ]
+[v _cantidad `ui ~T0 @X0 1 r1 ]
 [f ]
 "196
 [; ;funciones.c: 196:     char decenas = 0;
 [v _decenas `uc ~T0 @X0 1 a ]
 [e = _decenas -> -> 0 `i `uc ]
 "197
-[; ;funciones.c: 197:     uint8_t cont = 0;
-[v _cont `uc ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `uc ]
+[; ;funciones.c: 197:     uint16_t cont = 0;
+[v _cont `ui ~T0 @X0 1 a ]
+[e = _cont -> -> 0 `i `ui ]
 "199
 [; ;funciones.c: 199:     while (cantidad >= 100) {
 [e $U 183  ]
@@ -855,14 +855,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "200
 [; ;funciones.c: 200:         cantidad = cantidad - 100;
-[e = _cantidad -> - -> _cantidad `i -> 100 `i `uc ]
+[e = _cantidad - _cantidad -> -> 100 `i `ui ]
 "201
 [; ;funciones.c: 201:     }
 }
 [e :U 183 ]
 "199
 [; ;funciones.c: 199:     while (cantidad >= 100) {
-[e $ >= -> _cantidad `i -> 100 `i 184  ]
+[e $ >= _cantidad -> -> 100 `i `ui 184  ]
 [e :U 185 ]
 "202
 [; ;funciones.c: 202:     while (cantidad >= 10) {
@@ -871,17 +871,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "203
 [; ;funciones.c: 203:         cantidad = cantidad -10;
-[e = _cantidad -> - -> _cantidad `i -> 10 `i `uc ]
+[e = _cantidad - _cantidad -> -> 10 `i `ui ]
 "204
 [; ;funciones.c: 204:         cont++;
-[e ++ _cont -> -> 1 `i `uc ]
+[e ++ _cont -> -> 1 `i `ui ]
 "205
 [; ;funciones.c: 205:     }
 }
 [e :U 186 ]
 "202
 [; ;funciones.c: 202:     while (cantidad >= 10) {
-[e $ >= -> _cantidad `i -> 10 `i 187  ]
+[e $ >= _cantidad -> -> 10 `i `ui 187  ]
 [e :U 188 ]
 "206
 [; ;funciones.c: 206:     switch (cont){
@@ -962,16 +962,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 189  ]
 [e :U 190 ]
-[e [\ -> _cont `i , $ -> 0 `i 191
- , $ -> 1 `i 192
- , $ -> 2 `i 193
- , $ -> 3 `i 194
- , $ -> 4 `i 195
- , $ -> 5 `i 196
- , $ -> 6 `i 197
- , $ -> 7 `i 198
- , $ -> 8 `i 199
- , $ -> 9 `i 200
+[e [\ _cont , $ -> -> 0 `i `ui 191
+ , $ -> -> 1 `i `ui 192
+ , $ -> -> 2 `i `ui 193
+ , $ -> -> 3 `i `ui 194
+ , $ -> -> 4 `i `ui 195
+ , $ -> -> 5 `i `ui 196
+ , $ -> -> 6 `i `ui 197
+ , $ -> -> 7 `i `ui 198
+ , $ -> -> 8 `i `ui 199
+ , $ -> -> 9 `i `ui 200
  189 ]
 [e :U 189 ]
 "228
@@ -983,20 +983,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 182 ]
 }
 "234
-[; ;funciones.c: 234: char unidades(uint8_t cantidad) {
-[v _unidades `(uc ~T0 @X0 1 ef1`uc ]
+[; ;funciones.c: 234: char unidades(uint16_t cantidad) {
+[v _unidades `(uc ~T0 @X0 1 ef1`ui ]
 {
 [e :U _unidades ]
-[v _cantidad `uc ~T0 @X0 1 r1 ]
+[v _cantidad `ui ~T0 @X0 1 r1 ]
 [f ]
 "236
 [; ;funciones.c: 236:     char unidades = 0;
 [v _unidades `uc ~T0 @X0 1 a ]
 [e = _unidades -> -> 0 `i `uc ]
 "237
-[; ;funciones.c: 237:     uint8_t cont = 0;
-[v _cont `uc ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `uc ]
+[; ;funciones.c: 237:     uint16_t cont = 0;
+[v _cont `ui ~T0 @X0 1 a ]
+[e = _cont -> -> 0 `i `ui ]
 "239
 [; ;funciones.c: 239:     while (cantidad >= 100) {
 [e $U 202  ]
@@ -1004,14 +1004,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "240
 [; ;funciones.c: 240:         cantidad = cantidad - 100;
-[e = _cantidad -> - -> _cantidad `i -> 100 `i `uc ]
+[e = _cantidad - _cantidad -> -> 100 `i `ui ]
 "241
 [; ;funciones.c: 241:     }
 }
 [e :U 202 ]
 "239
 [; ;funciones.c: 239:     while (cantidad >= 100) {
-[e $ >= -> _cantidad `i -> 100 `i 203  ]
+[e $ >= _cantidad -> -> 100 `i `ui 203  ]
 [e :U 204 ]
 "242
 [; ;funciones.c: 242:     while (cantidad >= 10) {
@@ -1020,18 +1020,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "243
 [; ;funciones.c: 243:         cantidad = cantidad -10;
-[e = _cantidad -> - -> _cantidad `i -> 10 `i `uc ]
+[e = _cantidad - _cantidad -> -> 10 `i `ui ]
 "244
 [; ;funciones.c: 244:     }
 }
 [e :U 205 ]
 "242
 [; ;funciones.c: 242:     while (cantidad >= 10) {
-[e $ >= -> _cantidad `i -> 10 `i 206  ]
+[e $ >= _cantidad -> -> 10 `i `ui 206  ]
 [e :U 207 ]
 "245
 [; ;funciones.c: 245:     if (cantidad < 10) {
-[e $ ! < -> _cantidad `i -> 10 `i 208  ]
+[e $ ! < _cantidad -> -> 10 `i `ui 208  ]
 {
 "246
 [; ;funciones.c: 246:         cont = cantidad;
@@ -1119,16 +1119,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 209  ]
 [e :U 210 ]
-[e [\ -> _cont `i , $ -> 0 `i 211
- , $ -> 1 `i 212
- , $ -> 2 `i 213
- , $ -> 3 `i 214
- , $ -> 4 `i 215
- , $ -> 5 `i 216
- , $ -> 6 `i 217
- , $ -> 7 `i 218
- , $ -> 8 `i 219
- , $ -> 9 `i 220
+[e [\ _cont , $ -> -> 0 `i `ui 211
+ , $ -> -> 1 `i `ui 212
+ , $ -> -> 2 `i `ui 213
+ , $ -> -> 3 `i `ui 214
+ , $ -> -> 4 `i `ui 215
+ , $ -> -> 5 `i `ui 216
+ , $ -> -> 6 `i `ui 217
+ , $ -> -> 7 `i `ui 218
+ , $ -> -> 8 `i `ui 219
+ , $ -> -> 9 `i `ui 220
  209 ]
 [e :U 209 ]
 "270

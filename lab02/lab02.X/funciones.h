@@ -41,7 +41,7 @@ void comando_LCD(unsigned char dato);
 void centrado_LCD(unsigned char x,unsigned char y);
 void sed_LCD(char *dato);
 void caracteres_LCD(char data);
-char centenas(uint8_t cantidad);
-char decenas(uint8_t cantidad);
-char unidades(uint8_t cantidad);
+char centenas(uint32_t cantidad);
+char decenas(uint16_t cantidad);
+char unidades(uint16_t cantidad);
 #endif	/* XC_HEADER_TEMPLATE_H */

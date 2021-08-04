@@ -2644,9 +2644,9 @@ void comando_LCD(unsigned char dato);
 void centrado_LCD(unsigned char x,unsigned char y);
 void sed_LCD(char *dato);
 void caracteres_LCD(char data);
-char centenas(uint8_t cantidad);
-char decenas(uint8_t cantidad);
-char unidades(uint8_t cantidad);
+char centenas(uint32_t cantidad);
+char decenas(uint16_t cantidad);
+char unidades(uint16_t cantidad);
 # 11 "funciones.c" 2
 
 
@@ -2793,10 +2793,10 @@ void caracteres_LCD(char data){
 
 
 
-char centenas(uint8_t cantidad) {
+char centenas(uint32_t cantidad) {
 
     char centenas = 0;
-    uint8_t cont = 0;
+    uint32_t cont = 0;
 
     while (cantidad >= 100) {
         cantidad = cantidad - 100;
@@ -2831,10 +2831,10 @@ char centenas(uint8_t cantidad) {
 
 
 
-char decenas(uint8_t cantidad) {
+char decenas(uint16_t cantidad) {
 
     char decenas = 0;
-    uint8_t cont = 0;
+    uint16_t cont = 0;
 
     while (cantidad >= 100) {
         cantidad = cantidad - 100;
@@ -2871,10 +2871,10 @@ char decenas(uint8_t cantidad) {
 
 
 
-char unidades(uint8_t cantidad) {
+char unidades(uint16_t cantidad) {
 
     char unidades = 0;
-    uint8_t cont = 0;
+    uint16_t cont = 0;
 
     while (cantidad >= 100) {
         cantidad = cantidad - 100;

@@ -119,31 +119,31 @@
 "1718
 [u S162 . 1 `S154 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES162  1 e 1 @140 ]
-[s S238 . 1 `uc 1 SCS 1 0 :1:0 
+[s S237 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S244 . 1 `uc 1 . 1 0 :4:0 
+[s S243 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S249 . 1 `S238 1 . 1 0 `S244 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES249  1 e 1 @143 ]
+[u S248 . 1 `S237 1 . 1 0 `S243 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES248  1 e 1 @143 ]
 "2970
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-[s S290 . 1 `uc 1 . 1 0 :4:0 
+[s S289 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2991
-[u S296 . 1 `S290 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES296  1 e 1 @159 ]
+[u S295 . 1 `S289 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES295  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -157,22 +157,22 @@
 "4139
 [v _RC2 RC2 `VEb  1 e 0 @58 ]
 "38 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\lab02_main.c
-[v _conversion1 conversion1 `uc  1 e 1 0 ]
+[v _conversion1 conversion1 `ul  1 e 4 0 ]
 "39
-[v _conversion2 conversion2 `uc  1 e 1 0 ]
+[v _conversion2 conversion2 `ul  1 e 4 0 ]
 "40
 [v _voltaje1 voltaje1 `[4]uc  1 e 4 0 ]
 "63
 [v _main main `(v  1 e 1 0 ]
 {
-"130
+"132
 } 0
 "129 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\funciones.c
 [v _sed_LCD sed_LCD `(v  1 e 1 0 ]
 {
-[v sed_LCD@dato dato `*.24uc  1 a 1 wreg ]
-[v sed_LCD@dato dato `*.24uc  1 a 1 wreg ]
-[v sed_LCD@dato dato `*.24uc  1 a 1 12 ]
+[v sed_LCD@dato dato `*.4uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.4uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.4uc  1 a 1 11 ]
 "136
 } 0
 "138
@@ -180,7 +180,7 @@
 {
 [v caracteres_LCD@data data `uc  1 a 1 wreg ]
 [v caracteres_LCD@data data `uc  1 a 1 wreg ]
-[v caracteres_LCD@data data `uc  1 a 1 10 ]
+[v caracteres_LCD@data data `uc  1 a 1 9 ]
 "151
 } 0
 "84
@@ -193,7 +193,7 @@
 {
 [v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
 [v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
-[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 11 ]
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 10 ]
 "46
 } 0
 "51
@@ -201,8 +201,8 @@
 {
 [v conf_ADC@canal canal `uc  1 a 1 wreg ]
 [v conf_ADC@canal canal `uc  1 a 1 wreg ]
-[v conf_ADC@frec_reloj frec_reloj `uc  1 p 1 9 ]
-[v conf_ADC@canal canal `uc  1 a 1 12 ]
+[v conf_ADC@frec_reloj frec_reloj `uc  1 p 1 8 ]
+[v conf_ADC@canal canal `uc  1 a 1 11 ]
 "77
 } 0
 "119
@@ -210,8 +210,8 @@
 {
 [v centrado_LCD@x x `uc  1 a 1 wreg ]
 [v centrado_LCD@x x `uc  1 a 1 wreg ]
-[v centrado_LCD@y y `uc  1 p 1 11 ]
-[v centrado_LCD@x x `uc  1 a 1 12 ]
+[v centrado_LCD@y y `uc  1 p 1 10 ]
+[v centrado_LCD@x x `uc  1 a 1 11 ]
 "127
 } 0
 "106
@@ -219,21 +219,18 @@
 {
 [v comando_LCD@dato dato `uc  1 a 1 wreg ]
 [v comando_LCD@dato dato `uc  1 a 1 wreg ]
-[v comando_LCD@dato dato `uc  1 a 1 10 ]
+[v comando_LCD@dato dato `uc  1 a 1 9 ]
 "117
 } 0
 "156
 [v _centenas centenas `(uc  1 e 1 0 ]
 {
-[v centenas@cantidad cantidad `uc  1 a 1 wreg ]
-"158
-[v centenas@centenas centenas `uc  1 a 1 13 ]
 "159
-[v centenas@cont cont `uc  1 a 1 11 ]
-"156
-[v centenas@cantidad cantidad `uc  1 a 1 wreg ]
+[v centenas@cont cont `ul  1 a 4 16 ]
 "158
-[v centenas@cantidad cantidad `uc  1 a 1 12 ]
+[v centenas@centenas centenas `uc  1 a 1 20 ]
+"156
+[v centenas@cantidad cantidad `ul  1 p 4 8 ]
 "189
 } 0
 "46 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\lab02\lab02.X\lab02_main.c

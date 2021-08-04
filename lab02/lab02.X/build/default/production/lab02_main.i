@@ -2709,17 +2709,17 @@ void comando_LCD(unsigned char dato);
 void centrado_LCD(unsigned char x,unsigned char y);
 void sed_LCD(char *dato);
 void caracteres_LCD(char data);
-char centenas(uint8_t cantidad);
-char decenas(uint8_t cantidad);
-char unidades(uint8_t cantidad);
+char centenas(uint32_t cantidad);
+char decenas(uint16_t cantidad);
+char unidades(uint16_t cantidad);
 # 33 "lab02_main.c" 2
 
 
 
 
 
-uint8_t conversion1 = 0;
-uint8_t conversion2 = 0;
+uint32_t conversion1 = 0;
+uint32_t conversion2 = 0;
 char voltaje1[4] ;
 char voltaje2[4] ;
 
@@ -2800,12 +2800,14 @@ while (1) {
         ADCON0bits.GO = 1;
     }
 
+    voltaje1[1] = centenas(conversion1);
+
     centrado_LCD(0,0);
     _delay((unsigned long)((100)*(4000000/4000000.0)));
-    sed_LCD("S1:    S2:   S3:");
+    sed_LCD(&voltaje1[1]);
     _delay((unsigned long)((100)*(4000000/4000000.0)));
 
-    voltaje1[1] = centenas(conversion1);
+
 
 ;
 }

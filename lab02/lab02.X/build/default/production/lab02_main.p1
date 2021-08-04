@@ -114,12 +114,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1718
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-"41 ./funciones.h
+"44 ./funciones.h
+[v _centenas `(uc ~T0 @X0 0 ef1`ul ]
+"41
 [v _centrado_LCD `(v ~T0 @X0 0 ef2`uc`uc ]
 "42
 [v _sed_LCD `(v ~T0 @X0 0 ef1`*uc ]
-"44
-[v _centenas `(uc ~T0 @X0 0 ef1`uc ]
 "12 lab02_main.c
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "13
@@ -381,16 +381,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34 ./funciones.h
 [p x FOSC  =  INTRC_NOCLKOUT  ]
 "38 lab02_main.c
-[; ;lab02_main.c: 38: uint8_t conversion1 = 0;
-[v _conversion1 `uc ~T0 @X0 1 e ]
+[; ;lab02_main.c: 38: uint32_t conversion1 = 0;
+[v _conversion1 `ul ~T0 @X0 1 e ]
 [i _conversion1
--> -> 0 `i `uc
+-> -> -> 0 `i `l `ul
 ]
 "39
-[; ;lab02_main.c: 39: uint8_t conversion2 = 0;
-[v _conversion2 `uc ~T0 @X0 1 e ]
+[; ;lab02_main.c: 39: uint32_t conversion2 = 0;
+[v _conversion2 `ul ~T0 @X0 1 e ]
 [i _conversion2
--> -> 0 `i `uc
+-> -> -> 0 `i `l `ul
 ]
 "40
 [; ;lab02_main.c: 40: char voltaje1[4] ;
@@ -415,7 +415,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "51
 [; ;lab02_main.c: 51:             conversion1 = ((ADRESH*500)/255) ;
-[e = _conversion1 -> / * -> _ADRESH `i -> 500 `i -> 255 `i `uc ]
+[e = _conversion1 -> -> / * -> _ADRESH `i -> 500 `i -> 255 `i `l `ul ]
 "52
 [; ;lab02_main.c: 52:             ADCON0bits.CHS = 1;
 [e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
@@ -430,7 +430,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "55
 [; ;lab02_main.c: 55:             conversion2 = ((ADRESH*500)/255);
-[e = _conversion2 -> / * -> _ADRESH `i -> 500 `i -> 255 `i `uc ]
+[e = _conversion2 -> -> / * -> _ADRESH `i -> 500 `i -> 255 `i `l `ul ]
 "56
 [; ;lab02_main.c: 56:             ADCON0bits.CHS = 0;
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
@@ -542,31 +542,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 147 ]
 "120
-[; ;lab02_main.c: 120:     centrado_LCD(0,0);
-[e ( _centrado_LCD (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"121
-[; ;lab02_main.c: 121:     _delay((unsigned long)((100)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;lab02_main.c: 120:     voltaje1[1] = centenas(conversion1);
+[e = *U + &U _voltaje1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _voltaje1 `ui `ux ( _centenas (1 _conversion1 ]
 "122
-[; ;lab02_main.c: 122:     sed_LCD("S1:    S2:   S3:");
-[e ( _sed_LCD (1 :s 1C ]
+[; ;lab02_main.c: 122:     centrado_LCD(0,0);
+[e ( _centrado_LCD (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "123
 [; ;lab02_main.c: 123:     _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"124
+[; ;lab02_main.c: 124:     sed_LCD(&voltaje1[1]);
+[e ( _sed_LCD (1 &U *U + &U _voltaje1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _voltaje1 `ui `ux ]
 "125
-[; ;lab02_main.c: 125:     voltaje1[1] = centenas(conversion1);
-[e = *U + &U _voltaje1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _voltaje1 `ui `ux ( _centenas (1 _conversion1 ]
-"128
-[; ;lab02_main.c: 128: }
+[; ;lab02_main.c: 125:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"130
+[; ;lab02_main.c: 130: }
 }
 [e :U 144 ]
 [e $U 145  ]
 [e :U 146 ]
-"129
-[; ;lab02_main.c: 129: return;
+"131
+[; ;lab02_main.c: 131: return;
 [e $UE 143  ]
-"130
-[; ;lab02_main.c: 130: }
+"132
+[; ;lab02_main.c: 132: }
 [e :UE 143 ]
 }
-[a 1C 83 49 58 32 32 32 32 83 50 58 32 32 32 83 51 58 0 ]
