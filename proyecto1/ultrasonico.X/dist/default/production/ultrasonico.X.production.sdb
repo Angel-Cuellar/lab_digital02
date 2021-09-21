@@ -1,0 +1,218 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"15 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\proyecto1\ultrasonico.X\libreria.c
+[v _conf_OSCCON conf_OSCCON `(v  1 e 1 0 ]
+"49
+[v _conf_TMR1 conf_TMR1 `(v  1 e 1 0 ]
+"73
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+"95
+[v _comando_LCD comando_LCD `(v  1 e 1 0 ]
+"108
+[v _centrado_LCD centrado_LCD `(v  1 e 1 0 ]
+"118
+[v _sed_LCD sed_LCD `(v  1 e 1 0 ]
+"127
+[v _caracteres_LCD caracteres_LCD `(v  1 e 1 0 ]
+"145
+[v _centenas centenas `(uc  1 e 1 0 ]
+"183
+[v _decenas decenas `(uc  1 e 1 0 ]
+"224
+[v _unidades unidades `(uc  1 e 1 0 ]
+"43 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\proyecto1\ultrasonico.X\sensor.c
+[v _main main `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"290
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"352
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"414
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"650
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+[s S57 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1GE 1 0 :1:6 
+`uc 1 T1GINV 1 0 :1:7 
+]
+"700
+[s S65 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T1GIV 1 0 :1:7 
+]
+[s S73 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+]
+[u S76 . 1 `S57 1 . 1 0 `S65 1 . 1 0 `S73 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES76  1 e 1 @16 ]
+"1416
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1478
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1540
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1602
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1664
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S140 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1882
+[s S146 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S151 . 1 `S140 1 . 1 0 `S146 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES151  1 e 1 @143 ]
+"3387
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3449
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"4103
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"4106
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"4205
+[v _RE0 RE0 `VEb  1 e 0 @72 ]
+"4208
+[v _RE1 RE1 `VEb  1 e 0 @73 ]
+"4211
+[v _RE2 RE2 `VEb  1 e 0 @74 ]
+"38 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\proyecto1\ultrasonico.X\sensor.c
+[v _volt volt `[2]uc  1 e 2 0 ]
+"39
+[v _dist dist `ui  1 e 2 0 ]
+"43
+[v _main main `(v  1 e 1 0 ]
+{
+"109
+} 0
+"224 C:\Users\angel\OneDrive\Documentos\digital_02\lab_digital02\proyecto1\ultrasonico.X\libreria.c
+[v _unidades unidades `(uc  1 e 1 0 ]
+{
+"227
+[v unidades@cont cont `ui  1 a 2 3 ]
+"226
+[v unidades@unidades unidades `uc  1 a 1 5 ]
+"224
+[v unidades@cantidad cantidad `ui  1 p 2 0 ]
+"262
+} 0
+"118
+[v _sed_LCD sed_LCD `(v  1 e 1 0 ]
+{
+[v sed_LCD@dato dato `*.1uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.1uc  1 a 1 wreg ]
+[v sed_LCD@dato dato `*.1uc  1 a 1 3 ]
+"125
+} 0
+"127
+[v _caracteres_LCD caracteres_LCD `(v  1 e 1 0 ]
+{
+[v caracteres_LCD@data data `uc  1 a 1 wreg ]
+[v caracteres_LCD@data data `uc  1 a 1 wreg ]
+[v caracteres_LCD@data data `uc  1 a 1 1 ]
+"140
+} 0
+"73
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+{
+"93
+} 0
+"183
+[v _decenas decenas `(uc  1 e 1 0 ]
+{
+"186
+[v decenas@cont cont `ui  1 a 2 3 ]
+"185
+[v decenas@decenas decenas `uc  1 a 1 5 ]
+"183
+[v decenas@cantidad cantidad `ui  1 p 2 0 ]
+"219
+} 0
+"49
+[v _conf_TMR1 conf_TMR1 `(v  1 e 1 0 ]
+{
+[v conf_TMR1@pre_escaler pre_escaler `uc  1 a 1 wreg ]
+[v conf_TMR1@pre_escaler pre_escaler `uc  1 a 1 wreg ]
+"51
+[v conf_TMR1@pre_escaler pre_escaler `uc  1 a 1 2 ]
+"69
+} 0
+"15
+[v _conf_OSCCON conf_OSCCON `(v  1 e 1 0 ]
+{
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 wreg ]
+[v conf_OSCCON@frecuencia frecuencia `uc  1 a 1 2 ]
+"45
+} 0
+"108
+[v _centrado_LCD centrado_LCD `(v  1 e 1 0 ]
+{
+[v centrado_LCD@x x `uc  1 a 1 wreg ]
+[v centrado_LCD@x x `uc  1 a 1 wreg ]
+[v centrado_LCD@y y `uc  1 p 1 2 ]
+[v centrado_LCD@x x `uc  1 a 1 3 ]
+"116
+} 0
+"95
+[v _comando_LCD comando_LCD `(v  1 e 1 0 ]
+{
+[v comando_LCD@dato dato `uc  1 a 1 wreg ]
+[v comando_LCD@dato dato `uc  1 a 1 wreg ]
+[v comando_LCD@dato dato `uc  1 a 1 1 ]
+"106
+} 0
+"145
+[v _centenas centenas `(uc  1 e 1 0 ]
+{
+"148
+[v centenas@cont cont `ui  1 a 2 3 ]
+"147
+[v centenas@centenas centenas `uc  1 a 1 5 ]
+"145
+[v centenas@cantidad cantidad `ui  1 p 2 0 ]
+"178
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
