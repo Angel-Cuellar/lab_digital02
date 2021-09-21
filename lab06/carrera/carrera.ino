@@ -114,7 +114,6 @@ void loop() {
       digitalWrite(9, LOW);
       digitalWrite(10, LOW);
       break;
-      /*
     case (5):
       digitalWrite(3, LOW);
       digitalWrite(4, LOW);
@@ -155,7 +154,6 @@ void loop() {
       digitalWrite(9, LOW);
       digitalWrite(10, HIGH);
       break;
-      */
     default:
       digitalWrite(3, LOW);
       digitalWrite(4, LOW);
@@ -211,7 +209,6 @@ void loop() {
       digitalWrite(29, LOW);
       digitalWrite(33, LOW);
       break;
-      /*
     case (5):
       digitalWrite(23, LOW);
       digitalWrite(24, LOW);
@@ -252,7 +249,6 @@ void loop() {
       digitalWrite(29, LOW);
       digitalWrite(33, HIGH);
       break;
-      */
     default:
       digitalWrite(23, LOW);
       digitalWrite(24, LOW);
@@ -265,14 +261,14 @@ void loop() {
       break;
   }
 
-  if ((cont1 == 4) or (cont2 == 4)) {
+  if ((cont1 == 8) or (cont2 == 8)) {
     bloqueo = 1;    // activo el bloqueo de botones de ambos jugadores 
     digitalWrite(GREEN_LED, LOW);  // apago el RGB verde 
     
-    if (cont1 == 4) {
+    if (cont1 == 8) {
       digitalWrite(RED_LED, HIGH); // rojo gana player 1
     }
-    else if (cont2 == 4) {
+    else if (cont2 == 8) {
       digitalWrite(BLUE_LED, HIGH); // azul gana palyer 2
     }
   }
